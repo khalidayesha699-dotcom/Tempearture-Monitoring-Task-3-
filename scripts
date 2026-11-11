@@ -1,49 +1,49 @@
 #import pandas as pd
 
 # Temperature limits
-MIN_TEMP = 20
-MAX_TEMP = 24
+Min_Temp = 20
+Max_Temp = 23
 
-# Read Excel file
+# Read temperature deviation Excel file data
 df = pd.read_excel("room 02-3333.xlsx")
 
-# Find the Room Temp column
+# Find the Room Temp column Excel file
 room_temp_column = [col for col in df.columns if "Room Temp" in col][0]
 
-# Create results table
-results = df[["Timestamp", room_temp_column]]
+# Create results table of temperature deviation
+results = df[["Time", room_temp_column]]
 
-# High temperature breaches
-high_temps = results[results[room_temp_column] > MAX_TEMP]
+# High temperature Variation
+high_temps = results[results[room_temp_column] > Max_Temp]
 
-# Low temperature breaches
-low_temps = results[results[room_temp_column] < MIN_TEMP]
+# Low temperature Variation
+low_temps = results[results[room_temp_column] < Min_Temp]
 
-print("\nHIGH TEMPERATURE BREACHES")
+print("\nHIGH TEMPERATURE Variation")
 print(high_temps)
 
-print("\nLOW TEMPERATURE BREACHES")
+print("\nLOW TEMPERATURE Variation")
 print(low_temps)
 
-print("\nSUMMARY")
-print(f"High breaches: {len(high_temps)}")
-print(f"Low breaches: {len(low_temps)}")
+print("\nVariation_Results")
+print(f"High Variation: {len(high_temps)}")
+print(f"Low Variation: {len(low_temps)}")
 breaches = pd.concat([high_temps, low_temps])
 
-breaches.to_excel(
-    "Temperature_Breach_Report.xlsx",
+Variation.to_excel(
+    "Temperature_Variation_Report.xlsx",
     index=False
 )
 
 print("\nReport created:")
-print("Temperature_Breach_Report.xlsx")
+print("Temperature_Variation_Report.xlsx")
 import matplotlib.pyplot as plt
 
 # Create graph
 plt.figure(figsize=(12,6))
 
 plt.plot(
-    results["Timestamp"],
+    results["Time"],
     results[room_temp_column],
     label="Room Temperature"
 )
