@@ -27,11 +27,18 @@ The exercise demonstrates how small, clear tests and defensive coding habits red
 2. Documented project repository including README.md
 3. requirements.txt
 4. scripts (temperature_monitor.py)
-5. Temperature Breach report (Temperature_variation_report.xlsx)
+5. Temperature variation report (Temperature_variation_report.xlsx)
 6. Brief analysis which shows the benefits of automation 
 
 ## ✅ Success Criteria
-- 
+- We use excel files to load temperature data .
+- The code should be maintainable ,clear and commented.
+- The solution runs smoothly in a good virtual environment.
+- The user should  be able to explain:
+- Limits of temperature used
+- How to detect variation in system 
+- Pros and cons of using virtual environment.
+- Benefits of using automation for the business.
 
 
 ## ✅ Technology Used
