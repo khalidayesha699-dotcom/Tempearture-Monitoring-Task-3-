@@ -35,7 +35,12 @@ The exercise demonstrates how small, clear tests and defensive coding habits red
 
 
 ## ✅ Technology Used
-- Python 
+- Pandas
+- OpenPyXl
+- Matplotlib
+- Microsoft Excel
+- Microsoft Azure Cloud Shell
+- Python Virtual Environment(venv)
 
 
 ## 📁 Repository Structure
