@@ -19,7 +19,7 @@ The exercise demonstrates how small, clear tests and defensive coding habits red
 ## 🎯 Objectives
 - Create a isolated and reproducible environment used a virtual environment (venv) of Python
 -  Using the Pandas Library analyse the data of room temperature automaticatlly
-- Automatically generate the temperature breach report, which clearly define the temperature deviation
+- Automatically generate the temperature variation report, which clearly define the temperature deviation
 
 
 ## 📋 Deliverables
