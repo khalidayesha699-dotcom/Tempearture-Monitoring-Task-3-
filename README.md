@@ -1,7 +1,7 @@
-# User Brief — Upload Secure Environment & Process Automation
+# Task 3 — Upload Secure Environment & Process Automation
 
 ## Project Title
-**Room temperature Compliance Monitoring System**
+**Compliance Monitoring System Of Laboratories Temperaure**
 
 ## Background
 Scientist needs to know throughout the year temperature deviation occur in the laboratory to check either the environmental condition affected there experiment result.
@@ -17,16 +17,32 @@ Result shows how good coding practices and automated data analysis, reduce opera
 The exercise demonstrates how small, clear tests and defensive coding habits reduce risk in AI projects.
 
 ## 🎯 Objectives
-- Implement a minimal decision logic function (`should_upsell`) using **TDD**.  
-- Record experiments using **MLflow**.  
-- Refactor safely using tests as a safety net. 
+- Create a isolated and reproducible environment used a virtual environment (venv) of Python
+-  Using the Pandas Library analyse the data of room temperature automaticatlly
+- Automatically generate the temperature breach report, which clearly define the temperature deviation
+
 
 ## 📋 Deliverables
-1. Completed master notebook (`Workshop3W_Master.ipynb`)  
-2. Logged experiment (`./mlruns/`) 
+1. Virtual environment (venv) of Python (Sandbox)
+2. Documented project repository including README.md
+3. requirements.txt
+4. scripts (temperature_monitor.py)
+5. Temperature Breach report (Temperature_breach_report.xlsx)
+6. Brief analysis which shows the benefits of automation 
 
 ## ✅ Success Criteria
-- All tests pass in the notebook.
-- Code follows refactor rules (readable, modular, documented).  
-- MLflow logging runs without error or fails gracefully.  
-- Learner can explain each rule and its precedence.
+- 
+
+
+## ✅ Technology Used
+- Python 
+
+
+## 📁 Repository Structure
+
+```
+ai6_Task3/
+├── README.md                     # This file
+├── requirements.txt               
+└──  scripts                  
+```
