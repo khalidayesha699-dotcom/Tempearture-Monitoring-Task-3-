@@ -1,23 +1,24 @@
 #import pandas as pd
+#import matplotlib.pyplot as plt
 
 # Temperature limits
-Min_Temp = 20
-Max_Temp = 23
+MIN_TEMP = 19
+MAX_TEMP = 23
 
 # Read temperature deviation Excel file data
 df = pd.read_excel("room 02-3333.xlsx")
 
-# Find the Room Temp column Excel file
+# Find the Room Temp column
 room_temp_column = [col for col in df.columns if "Room Temp" in col][0]
 
-# Create results table of temperature deviation
-results = df[["Time", room_temp_column]]
+# Create results table
+results = df[["Timestamp", room_temp_column]]
 
 # High temperature Variation
-high_temps = results[results[room_temp_column] > Max_Temp]
+high_temps = results[results[room_temp_column] > MAX_TEMP]
 
 # Low temperature Variation
-low_temps = results[results[room_temp_column] < Min_Temp]
+low_temps = results[results[room_temp_column] < MIN_TEMP]
 
 print("\nHIGH TEMPERATURE Variation")
 print(high_temps)
@@ -28,9 +29,10 @@ print(low_temps)
 print("\nVariation_Results")
 print(f"High Variation: {len(high_temps)}")
 print(f"Low Variation: {len(low_temps)}")
-breaches = pd.concat([high_temps, low_temps])
+# Combine and save all variations
+variation = pd.concat([high_temps, low_temps])
 
-Variation.to_excel(
+variation.to_excel(
     "Temperature_Variation_Report.xlsx",
     index=False
 )
@@ -43,7 +45,7 @@ import matplotlib.pyplot as plt
 plt.figure(figsize=(12,6))
 
 plt.plot(
-    results["Time"],
+    results["Timestamp"],
     results[room_temp_column],
     label="Room Temperature"
 )
@@ -69,4 +71,4 @@ plt.legend()
 
 plt.savefig("temperature_graph.png")
 
-print("Graph created: temperature_graph.png") 1st
+print("Graph created: temperature_graph.png")
