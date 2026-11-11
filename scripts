@@ -1,5 +1,5 @@
-#import pandas as pd
-#import matplotlib.pyplot as plt
+import pandas as pd
+import matplotlib.pyplot as plt
 
 # Temperature limits
 MIN_TEMP = 19
@@ -26,10 +26,6 @@ print(high_temps)
 print("\nLOW TEMPERATURE Variation")
 print(low_temps)
 
-print("\nVariation_Results")
-print(f"High Variation: {len(high_temps)}")
-print(f"Low Variation: {len(low_temps)}")
-# Combine and save all variations
 variation = pd.concat([high_temps, low_temps])
 
 variation.to_excel(
@@ -37,38 +33,17 @@ variation.to_excel(
     index=False
 )
 
-print("\nReport created:")
-print("Temperature_Variation_Report.xlsx")
-import matplotlib.pyplot as plt
-
-# Create graph
 plt.figure(figsize=(12,6))
-
 plt.plot(
     results["Timestamp"],
     results[room_temp_column],
     label="Room Temperature"
 )
 
-plt.axhline(
-    y=MAX_TEMP,
-    color="red",
-    linestyle="--",
-    label="Maximum Limit"
-)
+plt.axhline(y=MAX_TEMP, color="red", linestyle="--")
+plt.axhline(y=MIN_TEMP, color="blue", linestyle="--")
 
-plt.axhline(
-    y=MIN_TEMP,
-    color="blue",
-    linestyle="--",
-    label="Minimum Limit"
-)
-
-plt.title("Room Temperature Trend")
-plt.xlabel("Date")
-plt.ylabel("Temperature (°C)")
 plt.legend()
-
 plt.savefig("temperature_graph.png")
 
 print("Graph created: temperature_graph.png")
