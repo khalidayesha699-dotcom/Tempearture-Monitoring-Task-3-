@@ -69,4 +69,4 @@ plt.legend()
 
 plt.savefig("temperature_graph.png")
 
-print("Graph created: temperature_graph.png") 1st
+print("Graph created: temperature_graph.png")
