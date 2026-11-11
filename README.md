@@ -27,7 +27,7 @@ The exercise demonstrates how small, clear tests and defensive coding habits red
 2. Documented project repository including README.md
 3. requirements.txt
 4. scripts (temperature_monitor.py)
-5. Temperature Breach report (Temperature_breach_report.xlsx)
+5. Temperature Breach report (Temperature_variation_report.xlsx)
 6. Brief analysis which shows the benefits of automation 
 
 ## ✅ Success Criteria
